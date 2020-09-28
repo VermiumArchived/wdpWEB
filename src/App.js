@@ -4,7 +4,7 @@ function App() {
   return (
     <div>
       <h1>
-        What's Dis Pic <br/>Web Application
+        {"What's Dis Pic <br/>Web Application"}
       </h1>
     </div>
   );
