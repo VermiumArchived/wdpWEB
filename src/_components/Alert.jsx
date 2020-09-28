@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-import { alertService, AlertType } from '../_services';
-import { history } from '../_helpers';
+import { alertService, AlertType } from "../_services";
+import { history } from "../_helpers";
 
 const propTypes = {
   id: PropTypes.string,
@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  id: 'default-alert',
+  id: "default-alert",
   fade: true,
 };
 
@@ -44,7 +44,7 @@ function Alert({ id, fade }) {
     // clear alerts on location change
     const historyUnlisten = history.listen(({ pathname }) => {
       // don't clear if pathname has trailing slash because this will be auto redirected again
-      if (pathname.endsWith('/')) return;
+      if (pathname.endsWith("/")) return;
 
       alertService.clear(id);
     });
@@ -78,22 +78,22 @@ function Alert({ id, fade }) {
   function cssClasses(alert) {
     if (!alert) return;
 
-    const classes = ['alert', 'alert-dismissable'];
+    const classes = ["alert", "alert-dismissable"];
 
     const alertTypeClass = {
-      [AlertType.Success]: 'alert alert-success',
-      [AlertType.Error]: 'alert alert-danger',
-      [AlertType.Info]: 'alert alert-info',
-      [AlertType.Warning]: 'alert alert-warning',
+      [AlertType.Success]: "alert alert-success",
+      [AlertType.Error]: "alert alert-danger",
+      [AlertType.Info]: "alert alert-info",
+      [AlertType.Warning]: "alert alert-warning",
     };
 
     classes.push(alertTypeClass[alert.type]);
 
     if (alert.fade) {
-      classes.push('fade');
+      classes.push("fade");
     }
 
-    return classes.join(' ');
+    return classes.join(" ");
   }
 
   if (!alerts.length) return null;
