@@ -1,0 +1,26 @@
+{
+    "editor.wordWrapColumn": 100,
+    "editor.tabSize": 2,
+    "workbench.colorCustomizations": {
+      "titleBar.activeBackground": "#336699",
+      "titleBar.inactiveBackground": "#33669999",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "statusBar.background": "#336699",
+      "statusBarItem.hoverBackground": "#407fbf",
+      "statusBar.foreground": "#e7e7e7",
+      "tab.activeBorder": "#407fbf"
+    },
+    "editor.formatOnSave": true,
+    "javascript.format.enable": false,
+    "eslint.autoFixOnSave": true,
+    "files.eol": "\n",
+    "prettier.endOfLine": "lf",
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "es5",
+    "peacock.color": "#369",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+  }
+  
